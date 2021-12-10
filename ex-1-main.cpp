@@ -2,7 +2,7 @@
 #define CPP2_PRIME_UPPER_LIMIT 1000000 
 using namespace std;
 
-bool prime(unsigned int n) {
+bool prime(int n) {
 	if (n == 2) return 1;
 	if (n <= 1 || n % 2 == 0) return 0;
 	for (int i = 3; i * i <= n; i += 2) {
@@ -14,9 +14,9 @@ bool prime(unsigned int n) {
 
 }
 
-int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
+int nth_prime(int a,int d,int n) {
 	int x = a;
-	unsigned int cnt = 0;
+	int cnt = 0;
 	if (a % 2 == 0 && d % 2 == 0)return 0;
 	while (cnt < n) {
 		if (prime(x) == 1) {
